@@ -1,0 +1,149 @@
+:root{
+ --fondo:#6D7074;
+ --console: #30353A;
+ --numbercolor:#E5C30F;
+ --header: #E0E8F0;
+ --highligh-reseved: #04d289;
+ --highligh-symbol: #cb04d2;
+ --highligh-string: #d28304;
+ --font:white;
+}
+
+body {
+    background: var(--fondo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+  }
+
+  .margin{
+    margin-right: 30px;
+  }
+  
+  .terminal-window {
+    text-align: left;
+    width: 550px;
+    height: 500px;
+    border-radius: 10px;
+    position: relative;
+  
+  }
+  
+  .terminal-window header {
+    background: var(--header);
+    height: 30px;
+    border-radius: 8px 8px 0 0;
+    padding-left: 10px;
+  }
+
+  .keyword {
+    color: var(--highligh-reseved);
+  }
+
+  .symbol{
+    color:var(--highligh-symbol)
+  }
+  .string{
+    color: var(--highligh-string);
+  }
+  .editext{
+    position: relative;
+  }
+  .codigo-resaltado {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    pointer-events: none;
+    white-space: pre-wrap;
+  }
+  .terminal-window header .button {
+    width: 12px;
+    height: 12px;
+    margin: 10px 4px 0 0;
+    display: inline-block;
+    border-radius: 8px;
+  }
+  
+  .terminal-window header .button.green {
+    background: #3BB662;
+  }
+  
+  .terminal-window header .button.yellow {
+    background: #E5C30F;
+  }
+  
+  .terminal-window header .button.red {
+    background: #E75448;
+  }
+
+  .textArea{
+    color: var(--font);
+    font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+    font-size: 11pt;
+    background: var(--console);
+    padding: 10px 0;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    overflow: hidden;
+  }
+
+  .lineNumber{
+   color: var(--numbercolor);
+   font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+   padding: 10px;
+   text-align: right;
+   min-width: 15px;
+   overflow: visible;
+  }
+  
+  .terminal-window section.terminal {
+    color: var(--font);
+    font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+    font-size: 11pt;
+    background: var(--console);
+    padding: 10px;
+    border-radius:0 0 8px 8px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    bottom: 0;
+  
+  }
+  
+  .terminal-window section.terminal .typed-cursor {
+      opacity: 1;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+  }
+  @keyframes blink{
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+  }
+  @-webkit-keyframes blink{
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+  }
+  @-moz-keyframes blink{
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+  }
+  
+  .terminal-data { display: none; }
+  .terminal-window .gray { color: gray; }
+  .terminal-window .green { color: green;}
+
+  .terminal{
+    display: flex;
+    overflow: auto;
+  }
+
+ 
